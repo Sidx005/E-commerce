@@ -406,6 +406,7 @@ justify-content: center;
 padding: 50px;
 flex-direction: column;
 gap: 20px;
+color: black;
 
 }
 
@@ -491,4 +492,8 @@ gap: 20px;
   height: 30px;
   width: 30px;
  }
+}
+.Newletter h2{
+  text-align: center;
+
 }
