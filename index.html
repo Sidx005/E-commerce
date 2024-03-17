@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Poppins:ital,wght@1,500&display=swap');
+
+        *{
+            margin: 0;
+           padding: 0;
+           font-family: 'Poppins', sans-serif;
+           transition:0.5s ease-in-out;
+        }
+        .contain{
+            min-height: 100vh;
+            background: linear-gradient(165deg, rgb(0, 0, 0) ,rgb(0, 0, 0), rgb(23, 27, 33))no-repeat ; 
+            display: flex;
+            justify-content: center;
+flex-direction: column;
+position: relative;
+width: 100%;
+overflow: hidden;
+        }
+
+        .main{
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            height: 50%;
+            width: 100%;
+            align-items: center;
+        }
+        .img{
+            height: 450px;
+            width: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        span{
+            margin-top: 40px;
+        }
+        .main span h2{
+            font-size: 100px;
+        }
+        .main h3{
+            font-size: 50px;
+        }
+        button{
+            font-size: 20px;
+            padding: 20px;
+            border-radius: 30px;
+            border:0;
+            margin-top: 3rem;
+            width: 270px;
+            background: rgb(47, 47, 110);
+
+        }
+        button a{
+            color: #fff;
+            text-decoration: none;
+        }
+        nav{
+position: absolute;
+ top: 0;
+width: 100%;
+display: flex;
+justify-content: end;
+cursor: pointer;
+}
+nav img{
+    height: 50px;
+    width: 50px;
+}
+#Why{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 50px;
+    gap: 30px;
+    opacity: 0;
+}
+#Why.active{
+    transform: translateY(150px);
+
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#Why.active{
+    transform: translateY(0);
+
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.section{
+    width: 100%;
+   display: flex;
+   margin-top: 30px;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+.section span{
+    display: flex;
+    width: 700px;
+  font-size: 30px; 
+  text-align: justify;  
+
+}
+#Why h1{
+font-size: 60px;
+position: relative;
+cursor: pointer;
+}
+.watchimage{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 22px 0 white;
+}
+.watchimage img{
+    height: 100%;
+    width: 100%;
+    border-radius: 17px;
+}
+#Why h1:after
+{
+    content: "";
+    position: absolute;
+    height: 7px;
+    background-color: coral;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    width: 0;
+    
+}
+
+#Why h1:hover:after{
+    width: 100%;
+
+}
+
+@media(max-width:768px){
+    #Why{
+        text-align: center;
+      padding-right: 20px;
+    }
+    .section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .section span{
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        font-size: 25px;
+align-items: center; 
+flex-direction: column;
+}
+
+.section img{
+    width: 250px;
+    height: 250px;
+}
+.watchimage{
+    width: 250px;
+    height: 250px;
+}
+.main{
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+
+}
+nav{
+    position: fixed;
+    background:rgba(0 ,1, 0,0.8);
+}
+.main span{
+    margin-top: 20rem;
+}
+}
+@media(min-width:1018px)and (max-width:1168px){
+.section span{
+    font-size: 25px;
+}
+.section{
+    gap: 25px;
+}
+.section img{
+    height: 100%;
+    width: 100%;
+}
+.watchimage {
+    height: 150px;
+    width: 150px;
+}
+}
+@media(max-width:998px){
+    .section{
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .section span{
+        text-align: center;
+        text-wrap: wrap;
+    }
+}
+</style>
+</head>
+<body>
+<div class="contain">
+<nav>
+    <img src="user (2).png" alt="">
+</nav>    
+<div class="main">
+    <span>
+<h2>Smart Watches</h2>
+<h3>CRAFTED FOR YOU</h3>
+<button><a href="page.html">Shop Now</a></button>
+</span>
+<div class="img">
+<img src="watch2remove.png" alt="">
+</div>
+</div>
+<section id="Why">
+<h1>Why us
+</h1>
+<div class="section">
+<span>At our watch website, we offer more than just timepieces.
+    Our collection combines exquisite craftsmanship with unmatched service. With a curated selection catering to every style, we prioritize authenticity, quality, and your satisfaction. 
+   Experience luxury and reliability like never before with us.</span>
+<div class="watchimage">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkLsoh0-1HsekTW09ZW9hI9a_TVwaK6anb476-YLxWSAPUHUgbpvVoeG4TfIiHRt2U7o4&usqp=CAU" alt="">
+</div>
+</div>
+</section>
+</div> 
+<script>
+    window.addEventListener("scroll",reveal);
+    function reveal() {
+        var reveals = document.querySelectorAll('#Why');
+        for(var i=0;i<reveals.length;i++){
+            var windowheight=window.innerHeight;
+            var revealTop=reveals[i].getBoundingClientRect().top;
+            var revealpoint=150;
+            if(revealTop<windowheight-revealpoint){
+                reveals[i].classList.add('active');
+            }else              
+            {
+                reveals[i].classList.remove('active');
+               }
+        }
+    }
+</script>
+</body>
+</html>
