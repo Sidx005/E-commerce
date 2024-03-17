@@ -11,215 +11,139 @@
             margin: 0;
            padding: 0;
            font-family: 'Poppins', sans-serif;
-           transition:0.5s ease-in-out;
+           box-sizing: border-box;
         }
-        .contain{
-            min-height: 100vh;
-            background: linear-gradient(165deg, rgb(0, 0, 0) ,rgb(0, 0, 0), rgb(23, 27, 33))no-repeat ; 
-            display: flex;
-            justify-content: center;
-flex-direction: column;
-position: relative;
-width: 100%;
-overflow: hidden;
-        }
+        /* background: linear-gradient(165deg, rgb(0, 0, 0) ,rgb(0, 0, 0), rgb(23, 27, 33))no-repeat ;  */
 
-        .main{
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            height: 50%;
-            width: 100%;
-            align-items: center;
-        }
-        .img{
-            height: 450px;
-            width: 450px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img{
-            height: 100%;
-            width: 100%;
-        }
-        span{
-            margin-top: 40px;
-        }
-        .main span h2{
-            font-size: 100px;
-        }
-        .main h3{
-            font-size: 50px;
-        }
-        button{
-            font-size: 20px;
-            padding: 20px;
-            border-radius: 30px;
-            border:0;
-            margin-top: 3rem;
-            width: 270px;
-            background: rgb(47, 47, 110);
+   
 
-        }
-        button a{
-            color: #fff;
-            text-decoration: none;
-        }
-        nav{
-position: absolute;
- top: 0;
-width: 100%;
-display: flex;
-justify-content: end;
-cursor: pointer;
+.contain{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(165deg, rgb(0, 0, 0) ,rgb(0, 0, 0), rgb(23, 27, 33))no-repeat ; 
+    overflow: hidden;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+padding: 20px;
+background: rgba(0,0,0,0.1);
+z-index: 999;
 }
 nav img{
-    height: 50px;
-    width: 50px;
+    width: 30px;
+    height: 30px;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+}
+.main button{
+    padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      background-color: rgb(70, 70, 170);   
+       margin-top: 20px;
+
+}
+.main button a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+.img{
+    width: 500px;
+    height: 500px;
+
+}
+.img img{
+    height: 100%;
+    width: 100%;
+}
+@media(max-width:768px){
+    .main{
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 10rem;
+        text-align: center;
+    }
+  
 }
 #Why{
     width: 100%;
+    text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    color: #fff;
-    padding: 50px;
-    gap: 30px;
-    opacity: 0;
-}
-#Why.active{
-    transform: translateY(150px);
-
-    opacity: 0;
-    transition: all 0.5s ease;
-}
-#Why.active{
-    transform: translateY(0);
-
-    opacity: 1;
-    transition: all 0.5s;
-}
-
-.section{
-    width: 100%;
-   display: flex;
-   margin-top: 30px;
+    gap: 2rem;
+    color:#fff;
     align-items: center;
     padding: 30px;
-    justify-content: space-evenly;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: all 0.5s;
 }
-.section span{
-    display: flex;
-    width: 700px;
-  font-size: 30px; 
-  text-align: justify;  
-
+#Why.active{
+    opacity: 1;
+    transform: translateY(0);
 }
 #Why h1{
-font-size: 60px;
-position: relative;
+    text-align: center;
+    position: relative;
 cursor: pointer;
 }
-.watchimage{
-    height: 300px;
-    width: 300px;
-    border-radius: 20px;
-    box-shadow: 0 0 22px 0 white;
-}
-.watchimage img{
-    height: 100%;
-    width: 100%;
-    border-radius: 17px;
-}
-#Why h1:after
-{
-    content: "";
-    position: absolute;
-    height: 7px;
-    background-color: coral;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-    width: 0;
-    
-}
 
+#Why h1:after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: coral;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     transition: 0.5s;
+}
 #Why h1:hover:after{
     width: 100%;
 
 }
+.section{
+display: flex;
+gap: 5rem;
+}
+.section span{
+    text-align: justify;
+    text-wrap: wrap;
+    display: flex;
+    width: 300px;
 
-@media(max-width:768px){
-    #Why{
-        text-align: center;
-      padding-right: 20px;
-    }
+
+}
+.watchimage{
+    height: 200px;
+    width: 200px;
+    background: #000;
+    border-radius: 5px;
+}
+.watchimage img{
+    height:100%;
+    width: 100%;
+    border-radius: 5px;
+}
+@media (max-width:769px) {
     .section{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
     }
-    .section span{
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        width: 500px;
-        font-size: 25px;
-align-items: center; 
-flex-direction: column;
-}
-
-.section img{
-    width: 250px;
-    height: 250px;
-}
-.watchimage{
-    width: 250px;
-    height: 250px;
-}
-.main{
-justify-content: center;
-align-items: center;
-flex-direction: column;
-text-align: center;
-
-}
-nav{
-    position: fixed;
-    background:rgba(0 ,1, 0,0.8);
-}
-.main span{
-    margin-top: 20rem;
-}
-}
-@media(min-width:1018px)and (max-width:1168px){
-.section span{
-    font-size: 25px;
-}
-.section{
-    gap: 25px;
-}
-.section img{
-    height: 100%;
-    width: 100%;
-}
-.watchimage {
-    height: 150px;
-    width: 150px;
-}
-}
-@media(max-width:998px){
-    .section{
-        flex-direction: column;
-        gap: 5rem;
-    }
-    .section span{
-        text-align: center;
-        text-wrap: wrap;
+    #Why{
+        width: 100%;
     }
 }
 </style>
