@@ -236,7 +236,21 @@ footer{
   align-items: center;
   color: #fff;
 }
-
+@media (max-width:769px) {
+  .foot{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .foot .list1{
+    margin-top: 30%;
+    text-align: center;
+  }
+  footer{
+    height: 100%;
+  } 
+}
 .list1{
   display: flex;
   align-items: center;
@@ -322,13 +336,7 @@ flex-direction: column;}
 
 }
 @media (max-width:968px) {
-  swiper-slide {
-    height: 300px; /* Adjust the height for smaller screens */
-  }
-  .mySwiper{
-    aspect-ratio: 16/9;
-    
-  }
+ 
   
   .Brandcollections{
     grid-template-columns: repeat(2,250px);
@@ -470,13 +478,17 @@ gap: 20px;
   }
   #next{
     right: 0;
+
   }
-  #prev,#next{
-    height: 30px;
-    width: 30px;
-  }
+ 
   .gallery div{
     padding-left: 10%;
 
   }
+}
+@media(max-width:570px){
+ #wardrobe button{
+  height: 30px;
+  width: 30px;
+ }
 }
